@@ -7,6 +7,7 @@ navLinks.forEach(link => {
     }
 });
 
+
 function toggleMenu() {
     const nav = document.getElementById('navMenu');
     nav.classList.toggle('active');
@@ -16,8 +17,16 @@ const cForm = document.getElementById('contactForm');
 if (cForm) {
     cForm.onsubmit = function(e) {
         e.preventDefault();
-        alert('Сообщение отправлено!');
-        cForm.reset();
+        
+        const emailInput = document.getElementById('userEmail').value;
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (emailPattern.test(emailInput)) {
+            alert('Спасибо! Сообщение успешно отправлено.');
+            cForm.reset();
+        } else {
+            alert('Пожалуйста, введите корректный адрес электронной почты.');
+        }
     };
 }
 
@@ -30,11 +39,7 @@ if (chartEl) {
             datasets: [{
                 label: 'Скорость чтения (МБ/с)',
                 data: [150, 560, 7500],
-                backgroundColor: [
-                    '#95a5a6', 
-                    '#3498db', 
-                    '#2c3e50'
-                ],
+                backgroundColor: ['#95a5a6', '#3498db', '#2c3e50'],
                 borderWidth: 1
             }]
         },

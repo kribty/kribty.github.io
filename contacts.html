@@ -36,11 +36,15 @@
                 <form id="contactForm">
                     <div class="form-group">
                         <label>Ваше имя:</label>
-                        <input type="text" placeholder="Например: Иван Иванов" required>
+                        <input type="text" id="userName" placeholder="Например: Иван Иванов" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Ваш Email:</label>
+                        <input type="email" id="userEmail" placeholder="example@mail.com" required>
                     </div>
                     <div class="form-group">
                         <label>Ваш вопрос:</label>
-                        <textarea rows="5" placeholder="Напишите здесь ваш вопрос..." required></textarea>
+                        <textarea rows="5" id="userMsg" placeholder="Напишите здесь ваш вопрос..." required></textarea>
                     </div>
                     <button type="submit" class="btn-green">Отправить сообщение</button>
                 </form>

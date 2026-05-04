@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSD Tech — Тесты</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-wrapper"><span class="logo-text">SSD-Tech</span></div>
+            <nav class="main-nav" id="navMenu">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="history.html">История</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="performance.html">Тесты</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="notifications">
+                <span>🔔</span><span class="badge">3</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="content-container">
+        <div class="content-block">
+            <h2>Сравнение скоростей</h2>
+            <table class="speed-table">
+                <thead>
+                    <tr>
+                        <th>Интерфейс</th>
+                        <th>Чтение (МБ/с)</th>
+                        <th>Запись (МБ/с)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>SATA III</td>
+                        <td>560</td>
+                        <td>530</td>
+                    </tr>
+                    <tr class="highlight">
+                        <td>NVMe Gen 4</td>
+                        <td>7500</td>
+                        <td>6800</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="content-block">
+            <h3>Визуализация производительности</h3>
+            <canvas id="ssdChart" style="max-height: 400px; margin-top: 20px;"></canvas>
+        </div>
+
+        <div class="content-block">
+            <h4>Заметки тестера</h4>
+            <p>Все тесты проводились при комнатной температуре 22°C. Помните, что для Gen 4 накопителей обязательно наличие радиатора.</p>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>© 2026 SSD-Tech</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

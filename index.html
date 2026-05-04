@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSD Tech — Главная</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-wrapper"><span class="logo-text">SSD-Tech</span></div>
+            <nav class="main-nav" id="navMenu">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="history.html">История</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="performance.html">Тесты</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="notifications">
+                <span>🔔</span><span class="badge">3</span>
+            </div>
+            <div class="burger-btn" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <main class="content-container">
+        <div class="content-block">
+            <h2>Мир современных SSD накопителей</h2>
+            <p>Узнайте всё о технологиях хранения данных. Мы собрали историю, тесты и лучшие предложения в одном месте.</p>
+            
+            <div class="card-section" style="margin-top: 30px;">
+                <div class="ssd-card">
+                    <div class="card-image">🚀</div>
+                    <h3>Скорость</h3>
+                    <p>Загрузка системы за секунды.</p>
+                </div>
+                <div class="ssd-card">
+                    <div class="card-image">🛡️</div>
+                    <h3>Надежность</h3>
+                    <p>Отсутствие движущихся частей.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h3>Статистика и тренды</h3>
+            <p style="margin-bottom: 20px;">90% современных ПК перешли на SSD. Это самый эффективный способ ускорить ваш компьютер.</p>
+            <a href="catalog.html" class="btn-anim">Перейти в каталог</a>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>© 2026 SSD-Tech</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

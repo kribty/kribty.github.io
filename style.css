@@ -1,0 +1,241 @@
+:root {
+    --primary: #2c3e50;
+    --accent: #3498db;
+    --success: #27ae60;
+    --bg: #f4f7f6;
+    --white: #ffffff;
+    --transition: all 0.3s ease;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg);
+    color: var(--primary);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-header {
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 500;
+    padding-bottom: 5px;
+    transition: var(--transition);
+}
+
+.main-nav a:hover, .main-nav a.active {
+    color: var(--accent);
+    border-bottom: 2px solid var(--accent);
+}
+
+.notifications {
+    position: relative;
+    cursor: pointer;
+}
+
+.badge {
+    background: #e74c3c;
+    color: white;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 10px;
+    position: absolute;
+    top: -8px;
+    right: -12px;
+}
+
+main {
+    flex: 1;
+}
+
+.content-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.content-block {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    width: 100%;
+}
+
+.content-block h2 {
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+
+.card-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.ssd-card {
+    border: 1px solid #eee;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    flex: 1;
+    min-width: 250px;
+}
+
+.ssd-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-image {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.btn-anim {
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-green {
+    background-color: var(--success);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.speed-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.speed-table th, .speed-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.speed-table th {
+    background: var(--primary);
+    color: white;
+}
+
+.speed-table tr.highlight {
+    background: #f0f8ff;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+.main-footer {
+    background-color: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 40px;
+}
+
+.burger-btn {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.burger-btn span {
+    width: 25px;
+    height: 3px;
+    background: var(--primary);
+}
+
+@media (max-width: 768px) {
+    .main-nav {
+        display: none;
+    }
+    .burger-btn {
+        display: flex;
+    }
+    .main-nav.active {
+        display: block;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 20px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+    .main-nav.active ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+}

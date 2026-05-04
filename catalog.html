@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSD Tech — Каталог</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-wrapper"><span class="logo-text">SSD-Tech</span></div>
+            <nav class="main-nav" id="navMenu">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="history.html">История</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="performance.html">Тесты</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="notifications">
+                <span>🔔</span><span class="badge">3</span>
+            </div>
+            <div class="burger-btn" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <main class="content-container">
+        <div class="content-block">
+            <h2>Каталог накопителей</h2>
+            
+            <div class="card-section" style="margin-top: 30px;">
+                <div class="ssd-card">
+                    <h3>Samsung 990 Pro</h3>
+                    <p>NVMe PCIe 4.0</p>
+                    <button class="btn-anim" style="margin-top: 20px;">Купить</button>
+                </div>
+                <div class="ssd-card">
+                    <h3>WD Black SN850</h3>
+                    <p>NVMe PCIe 4.0</p>
+                    <button class="btn-anim" style="margin-top: 20px;">Купить</button>
+                </div>
+                <div class="ssd-card">
+                    <h3>Crucial MX500</h3>
+                    <p>SATA III</p>
+                    <button class="btn-anim" style="margin-top: 20px;">Купить</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>© 2026 SSD-Tech</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
